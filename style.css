@@ -1,0 +1,14 @@
+.benvenuto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* vh e il 90% dello schermo  */
+    height: 90vh;
+    background-color: aquamarine;
+}
+.bio {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+}
