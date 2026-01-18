@@ -5,7 +5,7 @@
     text-align: center;
     /* vh è percentuale dello schermo  */
     height: 90vh;
-    background-color: aquamarine;
+    background-color: rgb(114, 114, 114);
 }
 
 .bio {
@@ -35,4 +35,25 @@
 footer {
     background-color: cadetblue;
     padding: 5vh;
+}
+
+border-radius {
+background-color:#e0e0e0 8px;
+cursor:pointer;
+transition: 0.2s;
+}
+button:hover {
+background: #ccc;
+}
+.operator {
+background: #ffca7a;
+}
+.operator:hover {
+background: #ffb74a;
+}
+.equal {
+background: #7ad37a;
+}
+.equal:hover {
+background: #5bc65b;
 }
