@@ -52,32 +52,43 @@
             </div>
         </div>
     </div>
-    <div class="calculator">
-    <input type="text" id="display" placeholder="0" disabled>
+    
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="calculator-card">
+                <div class="calc-header text-center mb-3">
+                    <span class="badge bg-secondary">Standard Calculator</span>
+                </div>
+                
+                <input type="text" id="display" class="calc-display" placeholder="0" disabled>
 
-    <div class="buttons">
-        <button onclick="clearDisplay()" class="col-span-2">C</button>
-        <button onclick="deleteLast()">DEL</button>
-        <button onclick="appendToDisplay('/')" class="operator">÷</button>
-        
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('*')" class="operator">×</button>
-        
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('-')" class="operator">−</button>
-        
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('+')" class="operator">+</button>
-        
-        <button onclick="appendToDisplay('0')" class="col-span-2">0</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="calculate()" class="equals">=</button>
+                <div class="calc-buttons">
+                    <button onclick="clearDisplay()" class="btn-calc btn-clear span-2">C</button>
+                    <button onclick="deleteLast()" class="btn-calc btn-util">DEL</button>
+                    <button onclick="appendToDisplay('/')" class="btn-calc btn-op">÷</button>
+                    
+                    <button onclick="appendToDisplay('7')" class="btn-calc">7</button>
+                    <button onclick="appendToDisplay('8')" class="btn-calc">8</button>
+                    <button onclick="appendToDisplay('9')" class="btn-calc">9</button>
+                    <button onclick="appendToDisplay('*')" class="btn-calc btn-op">×</button>
+                    
+                    <button onclick="appendToDisplay('4')" class="btn-calc">4</button>
+                    <button onclick="appendToDisplay('5')" class="btn-calc">5</button>
+                    <button onclick="appendToDisplay('6')" class="btn-calc">6</button>
+                    <button onclick="appendToDisplay('-')" class="btn-calc btn-op">−</button>
+                    
+                    <button onclick="appendToDisplay('1')" class="btn-calc">1</button>
+                    <button onclick="appendToDisplay('2')" class="btn-calc">2</button>
+                    <button onclick="appendToDisplay('3')" class="btn-calc">3</button>
+                    <button onclick="appendToDisplay('+')" class="btn-calc btn-op">+</button>
+                    
+                    <button onclick="appendToDisplay('0')" class="btn-calc span-2">0</button>
+                    <button onclick="appendToDisplay('.')" class="btn-calc">.</button>
+                    <button onclick="calculate()" class="btn-calc btn-equal">=</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

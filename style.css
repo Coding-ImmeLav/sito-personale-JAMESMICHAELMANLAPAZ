@@ -58,70 +58,71 @@ background: #7ad37a;
 background: #5bc65b;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f9;
-    font-family: 'Segoe UI', sans-serif;
+/* Container styling */
+.calculator-card {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    border: 1px solid #333;
 }
 
-.calculator {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
-    width: 320px;
-}
-
-#display {
+/* Display Styling */
+.calc-display {
     width: 100%;
-    height: 60px;
-    font-size: 2rem;
+    height: 70px;
+    background: #000;
+    border: 2px solid #333;
+    color: #00ff88; /* Matrix green for contrast */
+    font-family: 'Courier New', monospace;
+    font-size: 2.2rem;
     text-align: right;
-    margin-bottom: 15px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: none;
-    background: #333;
-    color: #fff;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.buttons {
+/* Grid layout for buttons */
+.calc-buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
-button {
-    padding: 20px;
-    font-size: 1.2rem;
+/* General Button Style */
+.btn-calc {
+    height: 60px;
+    border-radius: 12px;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #444;
+    background: #333;
     color: white;
-    transition: 0.2s;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
-button:hover {
-    background-color: #555;
+.btn-calc:hover {
+    background: #444;
+    transform: translateY(-2px);
 }
 
-.operator {
-    background-color: #f39c12;
+.btn-calc:active {
+    transform: translateY(1px);
 }
 
-.operator:hover {
-    background-color: #e67e22;
-}
+/* Color Accents */
+.btn-op { background: #f39c12; color: #000; } /* Orange operators */
+.btn-op:hover { background: #e67e22; }
 
-.equals {
-    background-color: #27ae60;
-}
+.btn-equal { background: #27ae60; } /* Green equals */
+.btn-equal:hover { background: #2ecc71; }
 
-.col-span-2 {
+.btn-clear { background: #e74c3c; } /* Red clear */
+.btn-clear:hover { background: #c0392b; }
+
+.btn-util { background: #555; }
+
+/* Grid helper for 0 and Clear buttons */
+.span-2 {
     grid-column: span 2;
 }

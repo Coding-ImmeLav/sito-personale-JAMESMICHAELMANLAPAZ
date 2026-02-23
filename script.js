@@ -12,28 +12,26 @@ function assenze() {
 
 const display = document.getElementById('display');
 
-// Adds numbers or operators to the screen
 function appendToDisplay(input) {
+    // Prevent starting with an operator
+    if (display.value === "" && ['*','/','+'].includes(input)) return;
     display.value += input;
 }
 
-// Clears everything
 function clearDisplay() {
     display.value = "";
 }
 
-// Deletes the last character (Backspace)
 function deleteLast() {
     display.value = display.value.slice(0, -1);
 }
 
-// Performs the calculation
 function calculate() {
     try {
-        // eval() takes the string (e.g., "2+2") and computes it
-        display.value = eval(display.value);
+        // We use Function instead of eval for a slightly safer approach
+        display.value = new Function('return ' + display.value)();
     } catch (error) {
         display.value = "Error";
-        setTimeout(clearDisplay, 1500); // Clear error after 1.5s
+        setTimeout(clearDisplay, 1000);
     }
 }
