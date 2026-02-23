@@ -9,29 +9,3 @@ function assenze() {
     console.log(percentuale);
     document.getElementById("barra").style.width = percentuale + "%";
 }
-
-const display = document.getElementById('display');
-
-function appendToDisplay(input) {
-    // Prevent starting with an operator
-    if (display.value === "" && ['*','/','+'].includes(input)) return;
-    display.value += input;
-}
-
-function clearDisplay() {
-    display.value = "";
-}
-
-function deleteLast() {
-    display.value = display.value.slice(0, -1);
-}
-
-function calculate() {
-    try {
-        // We use Function instead of eval for a slightly safer approach
-        display.value = new Function('return ' + display.value)();
-    } catch (error) {
-        display.value = "Error";
-        setTimeout(clearDisplay, 1000);
-    }
-}
