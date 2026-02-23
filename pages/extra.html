@@ -52,7 +52,34 @@
             </div>
         </div>
     </div>
-    
+    <div class="calculator">
+    <input type="text" id="display" placeholder="0" disabled>
+
+    <div class="buttons">
+        <button onclick="clearDisplay()" class="col-span-2">C</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="appendToDisplay('/')" class="operator">÷</button>
+        
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')" class="operator">×</button>
+        
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')" class="operator">−</button>
+        
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')" class="operator">+</button>
+        
+        <button onclick="appendToDisplay('0')" class="col-span-2">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="calculate()" class="equals">=</button>
+    </div>
+</div>
 
     <!-- script di bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
